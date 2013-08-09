@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta http-equiv="Content-Type"
+            content="text/html; charset=UTF-8" />
+        <title>Hatena-Index</title>
+        <link href="bootstrap/css/style.css" rel="stylesheet">
+        <link href="bootstrap/css/blue/style.css" rel="stylesheet">
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        
+        
+        <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Doppio+One|Oxygen:700' rel='stylesheet' type='text/css'>
+        <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+        <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="bootstrap/js/jquery.tablesorter.min.js"></script>
+        <script src="http://ccchart.com/js/ccchart.js" charset="utf-8"></script>
+    </head>
+    <body>
+    <div id="wrap">
+        <div class="container" class="span12">
+        <div id="header">
+            <h1><a href="">Hatena-Index</a></h1>
+        </div>
+            あなたのはてなブログのHatena-Indexと各種SNSでの反応を測定します。<br/>
+            制作者id:otani0083、本アプリについては<a href
+            "http://otani0083.hatenablog.com/">こちら</a>をご参照ください。<br/>
+            Hatena-Indexについては<a href="http://d.hatena.ne.jp/min2-fly/20070717/1184690356">こちら</a>をご覧ください。<br/>
+            <br/>
+            <form method="post" action="/" class="form-horizontal">
+                <div class="control-group">
+                    <label class="control-label5" for="email">はてなブログのurl:</label>
+                    <input type="text" name="url" class="span4"/>
+                    <select class="span2" name="count">
+　　　　　　　　　　　　<option value="1" selected>最新の30エントリ</option>
+　　　　　　　　　　　　<option value="2">31-60</option>
+　　　　　　　　　　　　<option value="3">61-90</option>
+　　　　　　　　　　　　<option value="4">91-120</option>
+                    <option value="5">121-150</option>
+　　　　　　　　　　　　</select>
+                    <input type="submit" value="送信" class="btn btn-primary btn-mini"/>
+                </div>
+            </form>
+                    <hr>
+            <div class="row">
+            <div class="span4">
+            <h2>Hatena-Index</h2>
+            <h3 class="blog">{{img|safe}} <a href="{{url}}">{{title}}</a></h3>
+            のHatena-Indexは
+            <p class="hindex">{{hindex}}</p>
+            <p>{{hindex}}以上ブックマークされた記事が{{hindex}}個あります。</p>
+            </div>
+            <div class="span8">
+                <h2 class=graph>SNS別反応</h2>
+             <canvas id="graph"></canvas>
+            </div>
+         </div><!-- row -->
+
+
+
+
+            <hr>
+            <h2>対象エントリ一覧</a>
+            <table  id="myTable" class="tablesorter table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>番号</th>
+                        <th>タイトル</th>
+                        <th>はてブ</th>
+                        <th>はてなスター</th>
+                        <th>Twitter</th>
+                        <th>Facebook</th>
+                        <th>Google+</th>
+                    </tr>
+                </thead>
+            <tbody>
+                {% for data in apiresult %}
+                <tr>
+                <td>{{ forloop.counter }}</td>
+                <td><a href="{{data.1}}">{{data.0}}</a></td>
+                <td class="num">{{data.2}}</td>
+                <td class="num">{{data.3}}</td>
+                <td class="num">{{data.4}}</td>
+                <td class="num">{{data.5}}</td>
+                <td class="num">{{data.6}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+                
+        </div><!--container-->
+    </div><!--wrap-->
+    <div clsaa="container">
+        <div id="footer">
+              <p>© Li:d tech labs.</p>
+        </div>
+    </div>
+<script type="text/javascript">
+<!--
+$(document).ready(function() 
+{ 
+    $('#myTable').tablesorter(); 
+} 
+); 
+var chartdata2 = {
+
+  "config": {
+    "textColors":{"title":"#black","hanrei":"black","x":"black","y":"black"},
+    "xColor":"#9d9d9d",
+    "yColor":"#9d9d9d",
+    "type": "line",
+    "useShadow": "no",
+
+    "lineWidth": 2,
+    "width":770,
+
+    "colorSet": 
+          ["red","#FF34C0","#3CB000","#FF9114","#0036C0","#C328FF","#00A8A2"],
+    "bgGradient": {
+            "direction":"vertical",
+            "from":"#ffffff",
+            "to":"#ffffff"
+          }
+  },
+
+  "data": {{data|safe}}
+};
+ccchart.init('graph', chartdata2)
+//-->
+</script>
+
+</body>
+</html>

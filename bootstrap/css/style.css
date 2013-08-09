@@ -1,0 +1,54 @@
+<style type="text/css">
+body{
+
+}
+
+.num{
+   text-align: right;
+   width:70px;
+}
+html,
+      body {
+        height: 100%;
+        background-color:
+      }
+
+#wrap {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        /* Negative indent footer by it's height */
+        margin: 0 auto -60px;
+      }
+.container{
+    padding-bottom: 60px;
+    
+}
+#footer {
+        background-color: #f5f5f5;
+        text-align: center;
+        height: 60px;
+        line-height:60px
+      }
+p.hindex{
+  height: 100px;
+  font-size:12em;
+  padding-top: 80px;
+  text-align: center;
+  color: #567ce7;
+}
+h1{
+color: #567ce7 !important;
+
+}
+
+h2.graph{
+  margin-left:40px !important;
+}
+div#header{
+  height:80px;
+  padding-top: 20px;
+}
+h3.blog{
+  margin-top:40px;
+}

@@ -1,0 +1,425 @@
+
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta http-equiv="Content-Type"
+            content="text/html; charset=UTF-8" />
+        <title>Hatena-Index</title>
+        <link href="bootstrap/css/style.css" rel="stylesheet">
+        <link href="bootstrap/css/blue/style.css" rel="stylesheet">
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        
+        
+        <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Doppio+One|Oxygen:700' rel='stylesheet' type='text/css'>
+        <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+        <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="bootstrap/js/jquery.tablesorter.min.js"></script>
+        <script src="http://ccchart.com/js/ccchart.js" charset="utf-8"></script>
+    </head>
+    <body>
+    <div id="wrap">
+        <div class="container" class="span12">
+        <div id="header">
+            <h1><a href="">Hatena-Index</a></h1>
+        </div>
+            あなたのはてなブログのHatena-Indexと各種SNSでの反応を測定します。<br/>
+            制作者otani0083、本アプリについてはこちらをご参照ください。<br/>
+            Hatena-Indexについては<a href="http://d.hatena.ne.jp/min2-fly/20070717/1184690356">こちら</a>をご覧ください。<br/>
+            <br/>
+            <form method="post" action="/" class="form-horizontal">
+                <div class="control-group">
+                    <label class="control-label5" for="email">はてなブログのurl:</label>
+                    <input type="text" name="url" class="span4"/>
+                    <select class="span2" name="count">
+　　　　　　　　　　　　<option value="1" selected>最新の30エントリ</option>
+　　　　　　　　　　　　<option value="2">31-60</option>
+　　　　　　　　　　　　<option value="3">61-90</option>
+　　　　　　　　　　　　<option value="4">91-120</option>
+                    <option value="5">121-150</option>
+　　　　　　　　　　　　</select>
+                    <input type="submit" value="送信" class="btn btn-primary btn-mini"/>
+                </div>
+            </form>
+                    <hr>
+            <div class="row">
+            <div class="span4">
+            <h2>Hatena-Index</h2>
+            <h3 class="blog"><img alt="id:TM2501" class="profile-icon" src="http://cdn1.www.st-hatena.com/users/TM/TM2501/profile.gif"/><a href="http://tm2501.hatenablog.com">とある青二才の斜方前進</a></h3>
+            のHatena-Indexは
+            <p class="hindex">9</p>
+            <p>9以上ブックマークされた記事が9個あります。</p>
+            </div>
+            <div class="span8">
+                <h2 class=graph>SNS別反応</h2>
+             <canvas id="graph"></canvas>
+            </div>
+         </div><!-- row -->
+
+
+
+
+            <hr>
+            <h2>対象エントリ一覧</a>
+            <table  id="myTable" class="tablesorter table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>番号</th>
+                        <th>タイトル</th>
+                        <th>はてブ</th>
+                        <th>はてなスター</th>
+                        <th>Twitter</th>
+                        <th>Facebook</th>
+                        <th>Google+</th>
+                    </tr>
+                </thead>
+            <tbody>
+                
+                <tr>
+                <td>1</td>
+                <td><a href="http://tm2501.hatenablog.com/entry/20130530/1369924917">修学旅行でイオンに行く奴など「教養ではなく常識」がない！！ - とある青二才の斜方前進</a></td>
+                <td class="num">20</td>
+                <td class="num">0</td>
+                <td class="num">13</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                </tr>
+                
+                <tr>
+                <td>2</td>
+                <td><a href="http://tm2501.hatenablog.com/entry/20130529/1369834470">俺、ディズニーより人気の施設を知ってるぜ？案内してやるよ（笑） - とある青二才の斜方前進</a></td>
+                <td class="num">1</td>
+                <td class="num">1</td>
+                <td class="num">3</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                </tr>
+                
+                <tr>
+                <td>3</td>
+                <td><a href="http://tm2501.hatenablog.com/entry/20130528/1369734997">けいおん！とtrue tearsは萌えアニメじゃないと思う - とある青二才の斜方前進</a></td>
+                <td class="num">4</td>
+                <td class="num">0</td>
+                <td class="num">13</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                </tr>
+                
+                <tr>
+                <td>4</td>
+                <td><a href="http://tm2501.hatenablog.com/entry/20130526/1369571264">ブログデザインを変えたからアフィリエイト・広告の話をしようか - とある青二才の斜方前進</a></td>
+                <td class="num">22</td>
+                <td class="num">1</td>
+                <td class="num">1</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                </tr>
+                
+                <tr>
+                <td>5</td>
+                <td><a href="http://tm2501.hatenablog.com/entry/20130525/1369478298">君は多分、愛し・愛され慣れてないんだよ〜俺ガイル６話を見て〜 - とある青二才の斜方前進</a></td>
+                <td class="num">1</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                </tr>
+                
+                <tr>
+                <td>6</td>
+                <td><a href="http://tm2501.hatenablog.com/entry/20130523/1369316604">乙武入店拒否騒動に物申す〜おい、そこじゃないだろ！問題は…〜 - とある青二才の斜方前進</a></td>
+                <td class="num">13</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                </tr>
+                
+                <tr>
+                <td>7</td>
+                <td><a href="http://tm2501.hatenablog.com/entry/20130522/1369217507">『ちょっと、丸亀製麺に期待してみたい』と思うのはおいらだけかい？ - とある青二才の斜方前進</a></td>
+                <td class="num">10</td>
+                <td class="num">2</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                </tr>
+                
+                <tr>
+                <td>8</td>
+                <td><a href="http://tm2501.hatenablog.com/entry/20130521/1369140854">『進撃の巨人』はなぜヒットしたのか？〜６話視聴後『10年代の輪郭』が見えた気がした話〜 - とある青二才の斜方前進</a></td>
+                <td class="num">79</td>
+                <td class="num">0</td>
+                <td class="num">1</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                </tr>
+                
+                <tr>
+                <td>9</td>
+                <td><a href="http://tm2501.hatenablog.com/entry/20130518/1368870443">私が、躁鬱病になりまして･〜「鬱は心の風邪」いや、「癌」だよ？〜 - とある青二才の斜方前進</a></td>
+                <td class="num">8</td>
+                <td class="num">2</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                </tr>
+                
+                <tr>
+                <td>10</td>
+                <td><a href="http://tm2501.hatenablog.com/entry/20130517/1368798997">俺のオヤジはハマちゃんだった〜僕が今という時代を誇って生きていきてくために〜 - とある青二才の斜方前進</a></td>
+                <td class="num">2</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                </tr>
+                
+                <tr>
+                <td>11</td>
+                <td><a href="http://tm2501.hatenablog.com/entry/20130514/1368534063">エレンはなぜ、外に出たいのか？〜やかましくて、無粋な「進撃の巨人」論〜 - とある青二才の斜方前進</a></td>
+                <td class="num">136</td>
+                <td class="num">0</td>
+                <td class="num">1</td>
+                <td class="num">1</td>
+                <td class="num">1</td>
+                </tr>
+                
+                <tr>
+                <td>12</td>
+                <td><a href="http://tm2501.hatenablog.com/entry/20130514/1368470651">TM2501による【ツイッターフォロワーの増やし方講座】（本家） - とある青二才の斜方前進</a></td>
+                <td class="num">4</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                </tr>
+                
+                <tr>
+                <td>13</td>
+                <td><a href="http://tm2501.hatenablog.com/entry/20130512/1368291058">多分、僕は幸せを門前払いしてる - とある青二才の斜方前進</a></td>
+                <td class="num">1</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                </tr>
+                
+                <tr>
+                <td>14</td>
+                <td><a href="http://tm2501.hatenablog.com/entry/20130510/1368192092">僕は君の夢を見る〜「べらんべぇな東京人」あらため「大江戸の火消し」〜 - とある青二才の斜方前進</a></td>
+                <td class="num">12</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                </tr>
+                
+                <tr>
+                <td>15</td>
+                <td><a href="http://tm2501.hatenablog.com/entry/20130508/1367950744">一人会議のすゝめ〜病んでるからこそ、「メンヘラ」を活用できぬものか？〜 - とある青二才の斜方前進</a></td>
+                <td class="num">4</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                </tr>
+                
+                <tr>
+                <td>16</td>
+                <td><a href="http://tm2501.hatenablog.com/entry/20130507/1367869302">多分、その最上は「僕が歩くだけで道ができる」こと - とある青二才の斜方前進</a></td>
+                <td class="num">4</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                </tr>
+                
+                <tr>
+                <td>17</td>
+                <td><a href="http://tm2501.hatenablog.com/entry/20130505/1367758802">ライター(笑)の古田ラジオさんの作品を仕方なく「読んであげた」。 - とある青二才の斜方前進</a></td>
+                <td class="num">47</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                </tr>
+                
+                <tr>
+                <td>18</td>
+                <td><a href="http://tm2501.hatenablog.com/entry/20130504/1367648878">政治と経済の「大本営」達…活きて、行きて、逝きて - とある青二才の斜方前進</a></td>
+                <td class="num">2</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                </tr>
+                
+                <tr>
+                <td>19</td>
+                <td><a href="http://tm2501.hatenablog.com/entry/20130502/1367491327">自由人たちの秘密基地（他）　蟹丹 - とある青二才の斜方前進</a></td>
+                <td class="num">5</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                </tr>
+                
+                <tr>
+                <td>20</td>
+                <td><a href="http://tm2501.hatenablog.com/entry/20130501/1367355848">英語と人材と教育と〜ノートも使いこなせない人がスパコン買ってどうするの？ - とある青二才の斜方前進</a></td>
+                <td class="num">2</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                </tr>
+                
+                <tr>
+                <td>21</td>
+                <td><a href="http://tm2501.hatenablog.com/entry/20130429/1367186902">アベノミクス考察〜第二次安倍政権とは一体何なのか？〜 - とある青二才の斜方前進</a></td>
+                <td class="num">7</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                </tr>
+                
+                <tr>
+                <td>22</td>
+                <td><a href="http://tm2501.hatenablog.com/entry/20130427/1367067361">やったよー＼(^o^)／超会議で本出すよ！ - とある青二才の斜方前進</a></td>
+                <td class="num">1</td>
+                <td class="num">1</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                </tr>
+                
+                <tr>
+                <td>23</td>
+                <td><a href="http://tm2501.hatenablog.com/entry/20130423/1366669805">ネット界の「悪」になりたい〜大義のために、敢えて三枚下ろしになろう！〜 - とある青二才の斜方前進</a></td>
+                <td class="num">2</td>
+                <td class="num">2</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                </tr>
+                
+                <tr>
+                <td>24</td>
+                <td><a href="http://tm2501.hatenablog.com/entry/20130418/1366294647">世の中はむしろ、。不便なぐらいでちょうどういい。 - とある青二才の斜方前進</a></td>
+                <td class="num">2</td>
+                <td class="num">1</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                </tr>
+                
+                <tr>
+                <td>25</td>
+                <td><a href="http://tm2501.hatenablog.com/entry/20130413/1365830245">スクールカーストと若年向け文学〜さるラノベを読んでいる僕の苛立ち〜 - とある青二才の斜方前進</a></td>
+                <td class="num">56</td>
+                <td class="num">2</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                </tr>
+                
+                <tr>
+                <td>26</td>
+                <td><a href="http://tm2501.hatenablog.com/entry/20130411/1365692367">病院行ってきたよ - とある青二才の斜方前進</a></td>
+                <td class="num">2</td>
+                <td class="num">1</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                </tr>
+                
+                <tr>
+                <td>27</td>
+                <td><a href="http://tm2501.hatenablog.com/entry/20130410/1365520210">長文を書く集中力が湧かないから、ツイートをまとめました - とある青二才の斜方前進</a></td>
+                <td class="num">1</td>
+                <td class="num">2</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                </tr>
+                
+                <tr>
+                <td>28</td>
+                <td><a href="http://tm2501.hatenablog.com/entry/20130408/1365363001">リア充にならなかったけど、文句ある？ - とある青二才の斜方前進</a></td>
+                <td class="num">5</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                </tr>
+                
+                <tr>
+                <td>29</td>
+                <td><a href="http://tm2501.hatenablog.com/entry/20130403/1364987293">麻宮さんの妹(２)　あさの - とある青二才の斜方前進</a></td>
+                <td class="num">0</td>
+                <td class="num">1</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                </tr>
+                
+                <tr>
+                <td>30</td>
+                <td><a href="http://tm2501.hatenablog.com/entry/20130401/1364813918">麻宮さんの妹１　あさの - とある青二才の斜方前進</a></td>
+                <td class="num">3</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                <td class="num">0</td>
+                </tr>
+                
+            </tbody>
+        </table>
+                
+        </div><!--container-->
+    </div><!--wrap-->
+    <div clsaa="container">
+        <div id="footer">
+              <p>© Li:d tech labs.</p>
+        </div>
+    </div>
+<script type="text/javascript">
+<!--
+$(document).ready(function() 
+{ 
+    $('#myTable').tablesorter(); 
+} 
+); 
+var chartdata2 = {
+
+  "config": {
+    "textColors":{"title":"#black","hanrei":"black","x":"black","y":"black"},
+    "xColor":"#9d9d9d",
+    "yColor":"#9d9d9d",
+    "type": "line",
+    "useShadow": "no",
+
+    "lineWidth": 2,
+    "width":770,
+
+    "colorSet": 
+          ["red","#FF34C0","#3CB000","#FF9114","#0036C0","#C328FF","#00A8A2","#0036C0"],
+    "bgGradient": {
+            "direction":"vertical",
+            "from":"#ffffff",
+            "to":"#ffffff"
+          }
+  },
+
+  "data": [['number', '', '', '', '', 5, '', '', '', '', 10, '', '', '', '', 15, '', '', '', '', 20, '', '', '', '', 25, '', '', '', '', 30], ['Google+', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], ['Facebook', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], ['Twitter', 13, 3, 13, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], ['Star', 0, 1, 0, 1, 0, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 1, 2, 1, 2, 0, 1, 0], ['Bookmark', 20, 1, 4, 22, 1, 13, 10, 79, 8, 2, 136, 4, 1, 12, 4, 4, 47, 2, 5, 2, 7, 1, 2, 2, 56, 2, 1, 5, 0, 3]]
+};
+ccchart.init('graph', chartdata2)
+//-->
+</script>
+
+</body>
+</html>
